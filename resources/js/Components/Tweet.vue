@@ -129,7 +129,7 @@ function takeHandle(name) {
 }
 
 function formatLink(string) {
-    const pre = "http://localhost:8000";
+    const pre = "https://kikitak-production.up.railway.app";
     return pre + string;
 }
 </script>
