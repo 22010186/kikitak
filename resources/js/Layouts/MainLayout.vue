@@ -35,17 +35,17 @@
 
                 <div v-if="auth.user" class="absolute bottom-0">
                     <div
-                        class="lg:w-full mt-8 ml-2 text-white font-extrabold text-xl p-3 px-3 rounded-full cursor-pointer flex items-center space-x-4"
+                        class="lg:w-full mt-8 ml-2 text-white font-extrabold text-xl p-3 px-0 lg:px-3 rounded-full cursor-pointer flex items-center space-x-4"
                     >
                         <img
-                            class="rounded-full size-[55px] object-cover"
+                            class="rounded-full size-12 lg:size-16 object-cover"
                             :src="
                                 auth.user.avatar ??
                                 `https://avatar.iran.liara.run/username?username=[${auth.user.name}]`
                             "
                             alt=""
                         />
-                        <div class="w-full">
+                        <div class="w-full hidden lg:block">
                             <p class="text-black">{{ auth.user.name }}</p>
                             <p class="text-gray-800 text-sm">
                                 {{ auth.user.email }}
