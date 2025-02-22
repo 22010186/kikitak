@@ -35,18 +35,20 @@
 
                 <div v-if="auth.user" class="absolute bottom-0">
                     <div
-                        class="lg:w-full mt-8 ml-2 text-white font-extrabold text-xl p-3 px-0 lg:px-3 rounded-full cursor-pointer flex items-center space-x-4"
+                        class="lg:w-full mt-8 ml-2 text-xl p-3 px-0 lg:px-3 cursor-pointer flex items-center"
                     >
                         <img
-                            class="rounded-full size-12 lg:size-16 object-cover"
+                            class="rounded-full w-12 lg:w-16 aspect-square object-cover mr-4 shadow-sm"
                             :src="
                                 auth.user.avatar ??
                                 `https://avatar.iran.liara.run/username?username=[${auth.user.name}]`
                             "
-                            alt=""
+                            alt="avatar"
                         />
                         <div class="w-full hidden lg:block">
-                            <p class="text-black">{{ auth.user.name }}</p>
+                            <p class="text-black font-semibold">
+                                {{ auth.user.name }}
+                            </p>
                             <p class="text-gray-800 text-sm">
                                 {{ auth.user.email }}
                             </p>
@@ -77,7 +79,7 @@
                                         'border-black': isForYou,
                                     }"
                                 >
-                                    <div class="my-auto mt-4">For you</div>
+                                    <div class="my-auto mt-4">Đề xuất</div>
                                 </div>
                             </div>
                             <div
@@ -91,7 +93,7 @@
                                         'border-black': !isForYou,
                                     }"
                                 >
-                                    <div class="my-auto mt-4">Following</div>
+                                    <div class="my-auto mt-4">Theo dõi</div>
                                 </div>
                             </div>
                         </div>

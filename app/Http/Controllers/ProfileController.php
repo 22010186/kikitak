@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ProfileUpdateRequest;
+use App\Models\User;
+use App\Services\FileService;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -38,6 +40,19 @@ class ProfileController extends Controller
         $request->user()->save();
 
         return Redirect::route('profile.edit');
+    }
+
+    public function avatar(Request $request): RedirectResponse
+    {
+        $user = User::find($request->user()->id);
+
+        if (!is_null($request->file('file'))) {
+            $user = (new FileService)->addFile($user, $request, true);
+        }
+
+        $user->save();
+
+        return Redirect::route('tweet.index');
     }
 
     /**

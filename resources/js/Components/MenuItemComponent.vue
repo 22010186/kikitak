@@ -12,7 +12,7 @@
             class="lg:block hidden text-black font-extrabold text-2xl pl-4 mt-0.5"
             :class="{ '!text-blue-500': active }"
         >
-            {{ iconString }}
+            {{ name }}
         </span>
     </div>
 </template>

@@ -44,6 +44,10 @@ class TweetController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'tweet' => 'required',
+        ]);
+
         $tweet = new Tweet();
         if (!is_null($request->file('file'))) {
             $tweet = (new FileService)->addFile($tweet, $request);

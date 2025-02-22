@@ -40,7 +40,7 @@
                     >
                         <TrashCanOutline fillColor="#dc2626" :size="18" />
                         <p class="ml-2 text-red-600 font-extrabold">
-                            Delete Tweet
+                            Xóa Tweet
                         </p>
                     </Link>
                 </div>
