@@ -52,14 +52,14 @@
         <div v-if="tweet?.file">
             <div v-if="!tweet.isVideo" class="rounded-xl">
                 <img
-                    :src="formatLink(tweet.file)"
+                    :src="tweet.file"
                     class="mt-2 object-fill rounded-xl w-full h-full"
                     alt=""
                 />
             </div>
             <div v-else>
                 <video
-                    :src="formatLink(tweet.file)"
+                    :src="tweet.file"
                     class="mt-2 object-fill rounded-xl w-full"
                     controls
                 ></video>
@@ -126,10 +126,5 @@ function takeHandle(name) {
     const handle = "@" + cleanName.replace(/\s+/g, "");
 
     return handle;
-}
-
-function formatLink(string) {
-    const pre = "https://kikitak-production.up.railway.app";
-    return pre + string;
 }
 </script>
