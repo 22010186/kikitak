@@ -37,10 +37,26 @@ const props = defineProps({
 
 const { iconString } = toRefs(props);
 let icon = null;
+let name = null;
 
-if (iconString.value == "Home") icon = Home;
-if (iconString.value == "Explore") icon = PoundBox;
-if (iconString.value == "Notifications") icon = BellOutline;
-if (iconString.value == "Messages") icon = EmailOutline;
-if (iconString.value == "Profile") icon = AccountOutline;
+if (iconString.value == "Home") {
+    icon = Home;
+    name = "Trang chủ";
+}
+if (iconString.value == "Explore") {
+    icon = PoundBox;
+    name = "Tìm kiếm";
+}
+if (iconString.value == "Notifications") {
+    icon = BellOutline;
+    name = "Thông báo";
+}
+if (iconString.value == "Messages") {
+    icon = EmailOutline;
+    name = "Tin nhắn";
+}
+if (iconString.value == "Profile") {
+    icon = AccountOutline;
+    name = "Trang cá nhân";
+}
 </script>

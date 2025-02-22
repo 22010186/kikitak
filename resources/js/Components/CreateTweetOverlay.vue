@@ -55,7 +55,7 @@
                             @input="textareaInput"
                             cols="30"
                             rows="4"
-                            placeholder="What's happening?"
+                            placeholder="Điều gì đang diễn ra?"
                             ref="textarea"
                             class="w-full mt-2 focus:ring-0 text-black rounded-xl font-extrabold min-h-[120px]"
                         ></textarea>

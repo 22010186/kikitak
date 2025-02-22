@@ -118,14 +118,14 @@
                     <input
                         type="text"
                         class="appearance-none w-full border-none py-2 text-black placeholder-gray-500 leading-tight focus:ring-0"
-                        placeholder="Search"
+                        placeholder="Tìm kiếm"
                     />
                 </div>
                 <div class="w-full mt-4 rounded-lg lg:block hidden">
                     <div
                         class="w-full p-4 text-black font-extrabold mb-6 text-xl border-b border-gray-800"
                     >
-                        What's happening
+                        Điều gì đang diễn ra?
                     </div>
                     <div
                         class="h-[80px] hover:bg-black/10 rounded-xl cursor-pointer transition duration-200 ease-in-out"
