@@ -15,7 +15,11 @@
                     />
                 </div>
                 <div>
-                    <p>{{ tweet.user?.name ?? "User" }}</p>
+                    <Link :href="`/user/${tweet.user.id}`">
+                        <p class="font-bold text-lg text-black">
+                            {{ tweet.user?.name ?? "User" }}
+                        </p>
+                    </Link>
                     <p class="font-light text-sm text-black">
                         {{ takeHandle(tweet.user?.name ?? "User") }}
                     </p>

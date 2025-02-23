@@ -6,6 +6,7 @@ use App\Http\Requests\ProfileUpdateRequest;
 use App\Models\User;
 use App\Services\FileService;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -53,6 +54,18 @@ class ProfileController extends Controller
         $user->save();
 
         return Redirect::route('tweet.index');
+    }
+
+    public function user($userId)
+    {
+        $user = User::find($userId);
+
+        $userTweets = $user->tweets()->with('user')->orderBy('created_at', 'desc')->get();
+
+        return Inertia::render('User/[Id]', [
+            'user' => $user,
+            'userTweets' => $userTweets
+        ]);
     }
 
     /**

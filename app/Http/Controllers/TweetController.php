@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Tweet;
+use App\Models\User;
 use App\Services\FileService;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Inertia\Inertia;
@@ -29,6 +31,15 @@ class TweetController extends Controller
             'laravelVersion' => Application::VERSION,
             'phpVersion' => PHP_VERSION,
         ]);
+    }
+
+    public function search(Request $request): JsonResponse
+    {
+        $query = $request->query('q');
+
+        $users = User::where('name', 'like', '%' . $query . '%')->get();
+
+        return response()->json($users, 200);
     }
 
     /**

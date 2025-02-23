@@ -2,7 +2,7 @@
 import { ref } from "vue";
 import PrimaryButton from "@/Components/PrimaryButton.vue";
 import DangerButton from "@/Components/DangerButton.vue";
-import { Link, useForm, usePage } from "@inertiajs/vue3";
+import { Link, router, useForm, usePage } from "@inertiajs/vue3";
 import Upload from "vue-material-design-icons/Upload.vue";
 
 defineProps({

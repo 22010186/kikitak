@@ -59,51 +59,10 @@
 
             <!-- Main section -->
             <div class="lg:w-7/12 w-11/12 border-x border-gray-800 relative">
-                <div
-                    class="bg-opacity-50 backdrop-blur-md z-10 absolute w-full"
-                >
-                    <div class="border-gray-800 border-b w-full">
-                        <div
-                            class="w-full text-black text--xl font-extrabold p-4"
-                        />
-
-                        <div class="flex">
-                            <div
-                                @click="isForYou = true"
-                                class="flex items-center justify-center w-full h-[60px] text-gray-500 text-lg font-extrabold p-4 hover:bg-black hover:bg-black/30 cursor-pointer transition duration-200 ease-in-out"
-                                :class="{ 'text-black bg-black/10': isForYou }"
-                            >
-                                <div
-                                    class="inline-block text-center border-b-4 border-transparent h-[60px]"
-                                    :class="{
-                                        'border-black': isForYou,
-                                    }"
-                                >
-                                    <div class="my-auto mt-4">Đề xuất</div>
-                                </div>
-                            </div>
-                            <div
-                                @click="isForYou = false"
-                                class="flex items-center justify-center w-full h-[60px] text-gray-500 text-lg font-extrabold p-4 hover:bg-black hover:bg-black/30 cursor-pointer transition duration-200 ease-in-out"
-                                :class="{ 'text-black bg-black/10': !isForYou }"
-                            >
-                                <div
-                                    class="inline-block text-center border-b-4 border-transparent h-[60px]"
-                                    :class="{
-                                        'border-black': !isForYou,
-                                    }"
-                                >
-                                    <div class="my-auto mt-4">Theo dõi</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                 <main
                     class="absolute top-0 z-0 h-full w-full overflow-auto scrollbar-hide"
                 >
-                    <div class="mt-[126px]" />
+                    <div class="mt-44" />
                     <slot />
                     <div class="pb-4" />
                 </main>
@@ -134,8 +93,8 @@
                         </div>
                         <div v-else-if="users.length">
                             <Link
-                                :href="`/user/${user.id}`"
                                 v-for="user in users"
+                                :href="`/user/${user.id}`"
                                 :key="user.id"
                                 class="mb-4 p-2 w-full cursor-pointer flex items-center border-b border-gray-800 hover:bg-black/10 transition duration-200 ease-in-out"
                             >
@@ -291,7 +250,6 @@ import MenuItemComponent from "@/Components/MenuItemComponent.vue";
 import CreateTweetOverlay from "@/Components/CreateTweetOverlay.vue";
 import ApplicationLogo from "@/Components/ApplicationLogo.vue";
 
-const isForYou = ref(true);
 const createTweet = ref(false);
 const auth = usePage().props.auth;
 const quotes = ref([]);
