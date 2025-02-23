@@ -1,66 +1,20 @@
+## Framework sử dụng
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+<p align="center"><a href="https://inertiajs.com/" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTji-PTREqE7GZZdsOjghNwR6RvUxHrQW5CKQ&s" width="400" alt="Inertia Logo"></a></p>
 
-## About Laravel
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="data:image/png;base64,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" width="400" alt="Inertia Logo"></a></p>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Preview App
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+![alt text](<Screenshot 2025-02-23 153028.png>)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+-   _[Click link sau để dến trang web](https://kikitak-production.up.railway.app/)_
 
-## Learning Laravel
+## Command
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Chạy 2 dòng code sau ở 2 tab terminal hoặc powershell khác nhau của cùng một project:
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+-   `php artisan serve`
+-   `npm run dev`

@@ -27,18 +27,7 @@ const onchange = () => {
 };
 
 const onDrop = (e) => {
-    errorType.value = "";
     file.value = e.dataTransfer.files[0];
-
-    let extension = file.value.name.substring(
-        file.value.name.lastIndexOf(".") + 1
-    );
-
-    if (extension != "mp4") {
-        errorType.value = "file";
-        return;
-    }
-
     fileDisplay.value = URL.createObjectURL(file.value);
     fileData.value = e.dataTransfer.files[0];
 };
